@@ -1,0 +1,30 @@
+
+plugin.tx_mlascoreclashnewtest_scoreclash {
+	view {
+		# cat=plugin.tx_mlascoreclashnewtest_scoreclash/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:mlascoreclashnewtest/Resources/Private/Templates/
+		# cat=plugin.tx_mlascoreclashnewtest_scoreclash/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:mlascoreclashnewtest/Resources/Private/Partials/
+		# cat=plugin.tx_mlascoreclashnewtest_scoreclash/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:mlascoreclashnewtest/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_mlascoreclashnewtest_scoreclash//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_mlascoreclashnewtest_stats {
+	view {
+		# cat=plugin.tx_mlascoreclashnewtest_stats/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:mlascoreclashnewtest/Resources/Private/Templates/
+		# cat=plugin.tx_mlascoreclashnewtest_stats/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:mlascoreclashnewtest/Resources/Private/Partials/
+		# cat=plugin.tx_mlascoreclashnewtest_stats/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:mlascoreclashnewtest/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_mlascoreclashnewtest_stats//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

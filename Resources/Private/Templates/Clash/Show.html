@@ -1,0 +1,83 @@
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h2 id="Activity">
+{clash.activity.name}
+</h2>
+
+
+<f:flashMessages />
+
+<f:if condition="<f:count subject='{unapprovedPointsFromLoggedInUser}'/>">
+	<section id="unapprovedPointsFromLoggedInUser">
+	    <f:for each="{unapprovedPointsFromLoggedInUser}" as="unapprovedPointFromLoggedInUser">
+	    	<f:if condition="{unapprovedPointFromLoggedInUser.user}!=0">
+	    	   <f:then>
+		    	<f:if condition="{unapprovedPointFromLoggedInUser.user.username}=={loggedInUser.user.username}">
+			   <f:then>
+			     {opponentUser.username} lost against you. <f:link.action action="approve" controller="Point" arguments="{point : unapprovedPointFromLoggedInUser, clash: clash}">Approve</f:link.action> <br/>
+			   </f:then>
+			   <f:else>
+			     {opponentUser.username} won against you. <f:link.action action="approve" controller="Point" arguments="{point : unapprovedPointFromLoggedInUser, clash: clash}">Approve</f:link.action><br/>
+			   </f:else>
+			 </f:if>
+		   </f:then>
+		   <f:else>
+		    	{opponentUser.username} recorded a Draw against you. <f:link.action action="approve" controller="Point" arguments="{point : unapprovedPointFromLoggedInUser, clash: clash}">Approve</f:link.action><br/>
+		   </f:else>
+	 	</f:if>
+	    </f:for>	 
+	</section>
+</f:if>
+
+<section class="userDetails" id="loggedInUser"> 
+<div class="userName">{loggedInUser.username}</div>
+<div class="userPoints">{loggedInUserPoints}</div>
+</section>
+<section id="middle"> 
+VS
+<div id="draws">
+<div>DRAWS</div>
+<span>{draws}</span>
+</div>
+</section>
+<section class="userDetails" id="opponentUser"> 
+<div class="userName">{opponentUser.username}</div>
+<div class="userPoints">{opponentUserPoints}</div>
+</section>
+<div class="clearer"></div>
+
+<div id="scoreButtons">
+	<f:form id="wonForm" action="create" controller="Point" arguments="{clash: '{clash.uid}'}" enctype="multipart/form-data" name="newPoint" object="{newPoint}">
+		<f:form.hidden property="value" value="1"/>
+		<f:form.hidden property="user" value="{loggedInUser}"/>
+		<f:form.hidden property="creator" value="{loggedInUser}"/>
+		<f:form.submit id="wonButton"value="WON" />
+	</f:form>
+	
+	<f:form id="drawForm" action="create" controller="Point" arguments="{clash: '{clash.uid}'}" enctype="multipart/form-data"  name="newPoint" object="{newPoint}">
+		<f:form.hidden property="value" value="1"/>
+		<f:form.hidden property="creator" value="{loggedInUser}"/>
+		
+		<f:form.submit id="drawButton" value="DRAW" />
+	</f:form>
+	
+	<f:form id="lostForm" action="create" controller="Point" arguments="{clash: '{clash.uid}'}" enctype="multipart/form-data"  name="newPoint" object="{newPoint}">
+		<f:form.hidden property="value" value="1"/>
+		<f:form.hidden property="user" value="{opponentUser}"/>
+		<f:form.hidden property="creator" value="{loggedInUser}"/>
+		<f:form.submit id="lostButton" value="LOST" />
+	</f:form>
+</div>
+</f:section>

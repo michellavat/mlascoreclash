@@ -1,0 +1,42 @@
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+      
+<f:form action="new" enctype="multipart/form-data">
+	<f:form.submit id="button-blue" value="New Clash!" />
+</f:form>
+
+     
+<f:flashMessages />
+
+<section id="clashesFromUser">
+	<f:for each="{clashes}" as="clash">
+		<f:link.action action="show" arguments="{clash : clash}" class="Clash"> 
+				<div class="activityName">{clash.activity.name}</div>
+				<div class="vs">VS</div>
+				
+				<f:if condition="{loggedInUser.username}=={clash.firstuser.username}">
+				    <f:then>
+				       <div class="opponentName">{clash.seconduser.username}</div>
+				    </f:then>
+				    <f:else>
+				      <div class="opponentName">{clash.firstuser.username}</div>
+				    </f:else>
+				</f:if>
+	
+		</f:link.action>
+	</f:for>
+	<div class="clearer"></div>
+</section>
+</f:section>

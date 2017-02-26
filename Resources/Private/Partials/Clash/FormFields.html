@@ -1,0 +1,17 @@
+<label>Aktivity:</label>	<br/><br/>
+<f:form.select property="activity" sortByOptionLabel="1" options="{activities}" optionLabelField="name" /><br/><br/>
+
+Didn t find your Activity? <f:link.action action="new" controller="Activity">Create a new Activity</f:link.action>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+
+<label>Opponnent:</label>	<br/><br/>
+<f:form.select property="seconduser" sortByOptionLabel="1" options="{users}" optionLabelField="username" /><br/><br/>
+
+<f:form.hidden property="firstuser" value="{loggedInUserUid}" />
+
+
+	
+	
+	
