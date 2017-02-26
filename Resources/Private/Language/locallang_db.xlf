@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-05-30T21:00:30Z" product-name="mlascoreclashnewtest">
+		<header/>
+		<body>
+			<trans-unit id="tx_mlascoreclashnewtest_domain_model_clash">
+				<source>Clash</source>
+			</trans-unit>
+			<trans-unit id="tx_mlascoreclashnewtest_domain_model_clash.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_mlascoreclashnewtest_domain_model_clash.activity">
+				<source>Activity</source>
+			</trans-unit>
+			<trans-unit id="tx_mlascoreclashnewtest_domain_model_clash.points">
+				<source>Points</source>
+			</trans-unit>
+			<trans-unit id="tx_mlascoreclashnewtest_domain_model_clash.firstuser">
+				<source>Firstuser</source>
+			</trans-unit>
+			<trans-unit id="tx_mlascoreclashnewtest_domain_model_clash.seconduser">
+				<source>Seconduser</source>
+			</trans-unit>
+			<trans-unit id="tx_mlascoreclashnewtest_domain_model_activity">
+				<source>Activity</source>
+			</trans-unit>
+			<trans-unit id="tx_mlascoreclashnewtest_domain_model_activity.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_mlascoreclashnewtest_domain_model_activity.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_mlascoreclashnewtest_domain_model_tournament">
+				<source>Tournament</source>
+			</trans-unit>
+			<trans-unit id="tx_mlascoreclashnewtest_domain_model_tournament.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_mlascoreclashnewtest_domain_model_tournament.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_mlascoreclashnewtest_domain_model_tournament.clash">
+				<source>Clash</source>
+			</trans-unit>
+			<trans-unit id="tx_mlascoreclashnewtest_domain_model_point">
+				<source>Point</source>
+			</trans-unit>
+			<trans-unit id="tx_mlascoreclashnewtest_domain_model_point.value">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="tx_mlascoreclashnewtest_domain_model_point.user">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="tx_mlascoreclashnewtest_domain_model_point.creator">
+				<source>Creator</source>
+			</trans-unit>
+			<trans-unit id="tx_mlascoreclashnewtest_domain_model_point.approved">
+				<source>Bestätigt</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

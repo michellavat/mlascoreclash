@@ -1,0 +1,57 @@
+plugin.tx_mlascoreclashnewtest_scoreclash {
+	view {
+		templateRootPaths.0 = {$plugin.tx_mlascoreclashnewtest_scoreclash.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_mlascoreclashnewtest_scoreclash.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_mlascoreclashnewtest_scoreclash.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = 9
+	}
+}
+
+
+
+plugin.tx_mlascoreclashnewtest_stats {
+	view {
+		templateRootPaths.0 = {$plugin.tx_mlascoreclashnewtest_stats.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_mlascoreclashnewtest_stats.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_mlascoreclashnewtest_stats.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_mlascoreclashnewtest_stats.persistence.storagePid}
+	}
+}
+
+plugin.tx_mlascoreclashnewtest._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-mlascoreclashnewtest table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-mlascoreclashnewtest table th {
+		font-weight:bold;
+	}
+
+	.tx-mlascoreclashnewtest table td {
+		vertical-align:top;
+	}
+
+	.typo3-messages .message-error {
+		color:red;
+	}
+
+	.typo3-messages .message-ok {
+		color:green;
+	}
+
+)
